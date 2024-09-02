@@ -6,10 +6,11 @@ https://striveschool-api.herokuapp.com/api/deezer/artist/{id}
 
 export class FetchAPI {
     #ALBUM_URL = `https://striveschool-api.herokuapp.com/api/deezer/album/`;
+    #ARTIST_URL = `https://striveschool-api.herokuapp.com/api/deezer/artist/`;
 
-    async getAlbum(id) {
+    async #fetchData(url, query) {
         try {
-            const response = await fetch(this.#ALBUM_URL + id)
+            const response = await fetch(url + query)
             if (!response.ok) {
                 throw new Error(`Fetch error`)
             }
@@ -18,4 +19,13 @@ export class FetchAPI {
             throw error;
         }
     }
+
+    async getAlbum(id) {
+        return this.#fetchData(this.#ALBUM_URL, id);
+    }
+
+    async getArtist(id) {
+        return this.#fetchData(this.#ARTIST_URL, id);
+    }
+
 }
