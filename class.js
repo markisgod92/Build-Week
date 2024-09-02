@@ -4,7 +4,9 @@ https://striveschool-api.herokuapp.com/api/deezer/album/{id}
 https://striveschool-api.herokuapp.com/api/deezer/artist/{id}
 */
 
-export class FetchAPI {
+class FetchAPI {
+    #homeArtists = ["queen", "metallica"];
+    #SEARCH_URL = `https://striveschool-api.herokuapp.com/api/deezer/search?q=`;
     #ALBUM_URL = `https://striveschool-api.herokuapp.com/api/deezer/album/`;
     #ARTIST_URL = `https://striveschool-api.herokuapp.com/api/deezer/artist/`;
 
@@ -20,6 +22,21 @@ export class FetchAPI {
         }
     }
 
+    async #fetchAll() {
+        const promises = this.#homeArtists.map(artist => this.#fetchData(this.#SEARCH_URL, artist));
+        const data = await Promise.all(promises);
+        const results = data.flatMap(item => item.data);
+        return results;
+    }
+
+    #shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const x = Math.floor(Math.random() * (i + 1));
+            [array[i], array[x]] = [array[x], array[i]];
+        }
+        return array;
+    }
+
     async getAlbum(id) {
         return this.#fetchData(this.#ALBUM_URL, id);
     }
@@ -28,4 +45,9 @@ export class FetchAPI {
         return this.#fetchData(this.#ARTIST_URL, id);
     }
 
+    async randomize() {
+        // ritorna TUTTI i brani degli artisti preferiti in ordine casuale
+        const data = await this.#fetchAll();
+        return this.#shuffleArray(data);
+    }
 }
