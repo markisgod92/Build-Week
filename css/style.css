@@ -1,0 +1,15 @@
+.main-row{
+    border: 1px solid black;
+    height: 90vh
+}
+.main-row div{
+    border: 1px solid black;
+}
+.bg-center{
+    background-color: #212121;
+}
+.fs-custom{
+    font-size: 0.6rem;
+    display: flex;
+    align-items: center;
+}
