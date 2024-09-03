@@ -23,9 +23,9 @@ class FetchAPI {
     }
 
     async #fetchAll() {
-        const promises = this.#homeArtists.map(artist => this.#fetchData(this.#SEARCH_URL, artist));
+        const promises = this.#homeArtists.map(artist => this.#fetchData(this.#SEARCH_URL, artist).catch(error => null));
         const data = await Promise.all(promises);
-        const results = data.flatMap(item => item.data);
+        const results =  data.flatMap(item => item.data);
         return results;
     }
 
@@ -45,9 +45,12 @@ class FetchAPI {
         return this.#fetchData(this.#ARTIST_URL, id);
     }
 
-    async randomize() {
-        // ritorna TUTTI i brani degli artisti preferiti in ordine casuale
+    async randomize(qty) {
+        // ritorna X brani degli artisti preferiti in ordine casuale
         const data = await this.#fetchAll();
-        return this.#shuffleArray(data);
+        return this.#shuffleArray(data).slice(0, qty)
     }
 }
+
+const fetchAPI = new FetchAPI;
+console.log(fetchAPI.randomize(5))
