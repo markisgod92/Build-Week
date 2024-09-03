@@ -15,8 +15,9 @@
   <div class="container-fluid">
     <div class="row d-flex main-row">
       <!-- Sidebar sx -->
-      <!-- first group -->
-      <div class="col-2 bg-black text-white">
+      <div class="col-2 bg-black text-white d-flex flex-column gap-4">
+
+        <!-- first group -->
         <div class="d-flex flex-column gap-2">
           <ion-icon name="ellipsis-horizontal-outline"></ion-icon>
           <!-- icon Home -->
@@ -35,6 +36,26 @@
             <span class="fs-custom">La tua libreria</span>
           </a>
         </div>
+
+        <!-- second group -->
+        <div class="d-flex flex-column gap-2">
+          <!-- Create playlist -->
+          <a class="nav-item nav-link d-flex gap-2" href="">
+            <ion-icon class="bg-white text-black rounded-1" name="add-outline"></ion-icon>
+            <span class="fs-custom">Crea playlist</span>
+          </a>
+          <!-- like title -->
+          <a class="nav-item nav-link d-flex gap-2" href="">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="fs-custom">Brani che ti piacciono</span>
+          </a>
+          <!-- your episode -->
+          <a class="nav-item nav-link d-flex gap-2" href="">
+            <ion-icon name="bookmark-outline"></ion-icon>
+            <span class="fs-custom">I tuoi episodi</span>
+          </a>
+        </div>
+
       </div>
       <!-- Main -->
       <div class="col-8 bg-center">
@@ -49,7 +70,7 @@
 
 
   </div>
-  
+
 
 
   <!-- Player -->
