@@ -13,3 +13,9 @@
     display: flex;
     align-items: center;
 }
+.custom-list{
+    list-style: none;
+    padding: 0;
+    font-size: 0.6rem;
+    
+}
