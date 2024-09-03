@@ -66,3 +66,12 @@
 .custo-size-share{
     font-size: 0.8rem;
 }
+.custom-img-sidedx{
+    width: 3rem;
+    height: 3rem;
+}
+.custom-img-sidedx img{
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+}
