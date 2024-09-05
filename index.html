@@ -99,6 +99,7 @@
         </div>
 
         <!-- Body -->
+       
         <div class="col-12 col-md-8 mt-5 px-5">
           <!-- first item -->
           <div class="col-12 d-flex flex-wrap justify-content-sm-center justify-content-lg-start p-4 gap-4 firt-item">
@@ -305,10 +306,10 @@
 
   <div class="player">
     <div class="container-fluid">
-      <div class="row text-white">
+      <div class="row text-white d-flex align-items-center">
 
         <!-- album play -->
-        <div class="col-2 d-none d-lg-block">
+        <div class="col-md-2 d-none d-lg-block">
           <div class="d-flex gap-4 align-items-center mt-3">
             <div class="player-image-wrapper">
               <img src="https://picsum.photos/id/237/200/300" alt="" id="playerImg">
@@ -364,8 +365,19 @@
         </div>
 
         <!-- comand -->
-        <div class="col-2">
+        <div class="col-md-2 d-none d-lg-block">
+          <div class="d-flex justify-content-around">
+            <ion-icon name="mic-outline"></ion-icon>
+            <ion-icon name="menu-outline"></ion-icon>
+            <ion-icon name="radio-outline"></ion-icon>
+            <ion-icon name="volume-medium-outline"></ion-icon>
 
+            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="" aria-valuemax="100">
+              <div class="progress-bar bg-white" style="width: 25%">""</div>
+            </div>
+
+            <ion-icon name="resize-outline"></ion-icon>
+          </div>
 
         </div>
       </div>
