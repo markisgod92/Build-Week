@@ -69,3 +69,33 @@ main {
     color: white;
 }
 
+/* body */
+
+.btn-play{
+    background-color: #1CD75F;
+    min-height: 3rem;
+    min-width: 6rem;
+    border-radius: 2rem;
+}
+
+.btn-save{
+    background-color: #050505;
+    color: white;
+    min-height: 3rem;
+    min-width: 6rem;
+    border-radius: 2rem;
+    border: 1px solid white;
+}
+.img-central{
+    max-height: 15rem;
+    max-width: 15rem;
+    
+}
+.img-central img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.firt-item{
+    background-image: linear-gradient(to right, black,#181818)
+}
