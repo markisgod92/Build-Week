@@ -86,16 +86,31 @@ main {
     border-radius: 2rem;
     border: 1px solid white;
 }
-.img-central{
+.img-first-item{
     max-height: 15rem;
     max-width: 15rem;
     
 }
-.img-central img{
+.img-first-item img{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 .firt-item{
     background-image: linear-gradient(to right, black,#181818)
+}
+
+.img-second-item{
+    height: 5rem;
+    max-width: 5rem;
+    
+    
+}
+.img-second-item img{
+   height: 100%;
+    width: 100%;
+    object-fit:cover;
+}
+.bg-second-item{
+    background-color: #2C2C2C;
 }
