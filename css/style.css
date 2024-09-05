@@ -1,8 +1,8 @@
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
+} */
 
 body {
     height: 100dvh;
@@ -36,12 +36,12 @@ main {
     overflow: hidden;
 }
 
-.custom-img-sidedx{
+.custom-img-sidedx {
     width: 3rem;
     height: 3rem;
 }
 
-.custom-img-sidedx img{
+.custom-img-sidedx img {
     height: 100%;
     width: 100%;
     border-radius: 100%;
@@ -56,29 +56,29 @@ main {
 .player-image-wrapper {
     height: 3rem;
     width: 3rem;
-    
+
 }
 
-#playerImg{
+#playerImg {
     width: 100%;
     height: 100%;
     border-radius: 3px;
 }
 
-.custom-player button{
+.custom-player button {
     color: white;
 }
 
 /* body */
 
-.btn-play{
+.btn-play {
     background-color: #1CD75F;
     min-height: 3rem;
     min-width: 6rem;
     border-radius: 2rem;
 }
 
-.btn-save{
+.btn-save {
     background-color: #050505;
     color: white;
     min-height: 3rem;
@@ -86,31 +86,51 @@ main {
     border-radius: 2rem;
     border: 1px solid white;
 }
-.img-first-item{
+
+.img-first-item {
     max-height: 15rem;
     max-width: 15rem;
-    
+
 }
-.img-first-item img{
+
+.img-first-item img {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-.firt-item{
-    background-image: linear-gradient(to right, black,#181818)
+
+.firt-item {
+    background-image: linear-gradient(to right, black, #181818)
 }
 
-.img-second-item{
+.img-second-item {
     height: 5rem;
     max-width: 5rem;
-    
-    
+
+
 }
-.img-second-item img{
-   height: 100%;
+
+.img-second-item img {
+    height: 100%;
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
-.bg-second-item{
+
+.bg-second-item {
     background-color: #2C2C2C;
+}
+
+.img-third-item {
+    max-height: 15rem;
+    max-width: 15rem;
+}
+
+.img-third-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.bg-third-item{
+    background-color:#181818 ;
+    border-radius: 0.5rem;
 }
