@@ -37,8 +37,8 @@ main {
 }
 
 .custom-img-sidedx {
-   max-width: 3rem;
-    max-height: 3rem;
+    width: 3rem;
+    height: 3rem;
 }
 
 .custom-img-sidedx img {
@@ -135,5 +135,3 @@ main {
     background-color:#181818 ;
     border-radius: 0.5rem;
 }
-
-/* sidebar dx */
