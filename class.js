@@ -53,12 +53,13 @@ export class FetchAPI {
 }
 
 export class Visualize {
-    constructor(container) {
-        this.container = container;
+    constructor(cardContainer, playlistContainer) {
+        this.cardContainer = cardContainer;
+        this.playlistContainer = playlistContainer;
     }
 
     startLoader() {
-        this.container.replaceChildren();
+        this.cardContainer.replaceChildren();
 
         const wrapper = document.createElement("div");
         wrapper.setAttribute("class", "loader h-100 w-100 d-flex justify-content-center align-items-center");
@@ -73,7 +74,7 @@ export class Visualize {
 
         spinner.appendChild(span);
         wrapper.appendChild(spinner);
-        this.container.appendChild(wrapper);
+        this.cardContainer.appendChild(wrapper);
     }
 
     stopLoader() {
@@ -95,7 +96,7 @@ export class Visualize {
 
         div.append(icon, span);
         wrapper.appendChild(div);
-        this.container.appendChild(wrapper);
+        this.cardContainer.appendChild(wrapper);
     }
 
     createSongCard(data) {
@@ -129,7 +130,36 @@ export class Visualize {
         cardBody.append(title, artist, album);
         card.append(img, cardBody);
         wrapper.appendChild(card);
-        this.container.appendChild(wrapper);
+        this.cardContainer.appendChild(wrapper);
+    }
+
+    createPlaylistCard(data) {
+        const wrapper = document.createElement("div");
+        wrapper.setAttribute("class", "col-12 col-md-6")
+
+        const card = document.createElement("div");
+        card.setAttribute("class", "bg-dark text-light row g-0");
+
+        const imgDiv = document.createElement("div");
+        imgDiv.setAttribute("class", "col-4");
+
+        const img = document.createElement("img");
+        img.setAttribute("class", "img-fluid object-fit-cover");
+        img.src = data.album.cover;
+        img.alt = data.album.title;
+
+        const cardBody = document.createElement("div");
+        cardBody.setAttribute("class", "col-8 d-flex flex-column justify-content-center");
+
+        const title = document.createElement("h5");
+        title.setAttribute("class", "card-title");
+        title.innerText = data.title;
+
+        imgDiv.appendChild(img);
+        cardBody.appendChild(title);
+        card.append(imgDiv, cardBody);
+        wrapper.append(card);
+        this.playlistContainer.appendChild(wrapper);
     }
 }
 
