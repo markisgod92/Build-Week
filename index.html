@@ -248,7 +248,7 @@
             <div class="player-image-wrapper">
               <img src="https://picsum.photos/id/237/200/300" alt="" id="playerImg">
             </div>
-            <div>
+            <div id="playerData">
               <h5>title more long</h5>
               <h6>artist</h6>
             </div>
@@ -258,7 +258,7 @@
 
         <!-- player -->
         <div class="col-12 col-md-8 d-flex justify-content-center">
-          <div class="col-12 col-md-8 d-flex justify-content-center ">
+          <div class="col-12 col-md-8 d-flex justify-content-center flex-column align-items-center" >
             <!-- comandi -->
             <div class="custom-player fs-1">
               <button class="btn fs-4" data-bs-toggle="button">
@@ -268,7 +268,7 @@
                 <ion-icon name="play-skip-back-outline"></ion-icon>
               </button>
               <button class="btn fs-4" data-bs-toggle="button">
-                <ion-icon name="play-circle-outline"></ion-icon>
+                <ion-icon name="play-circle-outline" id="playBtn"></ion-icon>
               </button>
               <button class="btn fs-4" data-bs-toggle="button">
                 <ion-icon name="play-skip-forward-outline"></ion-icon>
@@ -279,9 +279,13 @@
             </div>
 
             <!-- progress bar -->
-            <div>
+            <div class="w-100">
 
-              <audio controls src=""></audio>
+              <audio src=""></audio>
+
+              <div class="progress">
+                <div class="progress-bar" id="progress-bar"></div>
+              </div>
 
             </div>
 
@@ -306,10 +310,10 @@
             <ion-icon name="radio-outline"></ion-icon>
             <ion-icon name="volume-medium-outline"></ion-icon>
 
-            <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin=""
+            <!-- <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin=""
               aria-valuemax="100">
               <div class="progress-bar bg-white" style="width: 25%">""</div>
-            </div>
+            </div> -->
 
             <ion-icon name="resize-outline"></ion-icon>
           </div>
