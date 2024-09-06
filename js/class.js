@@ -53,13 +53,12 @@ export class FetchAPI {
 }
 
 export class Visualize {
-    constructor(cardContainer, playlistContainer) {
-        this.cardContainer = cardContainer;
-        this.playlistContainer = playlistContainer;
+    constructor(container) {
+        this.container = container;
     }
 
     startLoader() {
-        this.cardContainer.replaceChildren();
+        this.container.replaceChildren();
 
         const wrapper = document.createElement("div");
         wrapper.setAttribute("class", "loader h-100 w-100 d-flex justify-content-center align-items-center");
@@ -74,11 +73,11 @@ export class Visualize {
 
         spinner.appendChild(span);
         wrapper.appendChild(spinner);
-        this.cardContainer.appendChild(wrapper);
+        this.container.appendChild(wrapper);
     }
 
     stopLoader() {
-        document.querySelector(".loader").remove();
+        this.container.querySelector(".loader").remove();
     }
 
     showError() {
@@ -96,7 +95,7 @@ export class Visualize {
 
         div.append(icon, span);
         wrapper.appendChild(div);
-        this.cardContainer.appendChild(wrapper);
+        this.container.appendChild(wrapper);
     }
 
     createSongCard(data) {
@@ -130,7 +129,7 @@ export class Visualize {
         cardBody.append(title, artist, album);
         card.append(img, cardBody);
         wrapper.appendChild(card);
-        this.cardContainer.appendChild(wrapper);
+        this.container.appendChild(wrapper);
     }
 
     createPlaylistCard(data) {
@@ -159,7 +158,7 @@ export class Visualize {
         cardBody.appendChild(title);
         card.append(imgDiv, cardBody);
         wrapper.append(card);
-        this.playlistContainer.appendChild(wrapper);
+        this.container.appendChild(wrapper);
     }
 }
 
